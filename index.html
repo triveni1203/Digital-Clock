@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Digital Clock</h2>
+
+    <div class="clock">
+        <span id="hours">00</span> :
+        <span id="minutes">00</span> :
+        <span id="seconds">00</span>
+        <span id="ampm"></span>
+    </div>
+
+    <div class="date" id="date"></div>
+
+    <div class="buttons">
+        <button onclick="toggleMode()">🌙 Toggle Mode</button>
+        <button onclick="toggleFormat()">🔄 12/24 Hr</button>
+        <button onclick="changeColor()">🎨 Change Color</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

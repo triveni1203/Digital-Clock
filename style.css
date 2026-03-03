@@ -1,0 +1,88 @@
+:root {
+    --bg-color: linear-gradient(135deg, #1e3c72, #2a5298);
+    --text-color: white;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glow-color: #00f2ff;
+}
+
+body.light {
+    --bg-color: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    --text-color: #222;
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glow-color: #ff9800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    transition: 0.5s;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: var(--glass-bg);
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    color: var(--text-color);
+    width: 90%;
+    max-width: 500px;
+}
+
+.clock {
+    font-size: 55px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 0 0 20px var(--glow-color);
+}
+
+.date {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.buttons {
+    margin-top: 25px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .clock {
+        font-size: 35px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
